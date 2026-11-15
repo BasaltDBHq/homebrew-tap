@@ -5,21 +5,21 @@
 class Basaltdb < Formula
   desc "The action ledger for AI agents on your Postgres"
   homepage "https://github.com/BasaltDBHq/BasaltDB"
-  version "0.0.1-alpha.1"
+  version "0.0.1-alpha.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/BasaltDBHq/BasaltDB/releases/download/v0.0.1-alpha.1/basaltdb_0.0.1-alpha.1_darwin_amd64.tar.gz"
-      sha256 "b985525c225c78282ebe19eabf56510565b0c2b185c15e107fa0eba38447bfff"
+      url "https://github.com/BasaltDBHq/BasaltDB/releases/download/v0.0.1-alpha.2/basaltdb_0.0.1-alpha.2_darwin_amd64.tar.gz"
+      sha256 "377e6106fa1a76b452c363709cd28392fbaaf0b00b90b3d8559d7c45c8f066ac"
 
       define_method(:install) do
         bin.install "basalt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/BasaltDBHq/BasaltDB/releases/download/v0.0.1-alpha.1/basaltdb_0.0.1-alpha.1_darwin_arm64.tar.gz"
-      sha256 "deb28d450e62173ce19b24c3c8c03b99933e8bd749fdf6c7b3b557c1bceb1f2c"
+      url "https://github.com/BasaltDBHq/BasaltDB/releases/download/v0.0.1-alpha.2/basaltdb_0.0.1-alpha.2_darwin_arm64.tar.gz"
+      sha256 "5ded49efa44912fd4235607f8de8f30155cbd41ce0b300aa594dee565e74e4bd"
 
       define_method(:install) do
         bin.install "basalt"
@@ -29,15 +29,15 @@ class Basaltdb < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/BasaltDBHq/BasaltDB/releases/download/v0.0.1-alpha.1/basaltdb_0.0.1-alpha.1_linux_amd64.tar.gz"
-      sha256 "5a014bee1ea945e540ab5f4b9bf57c9f7508fea72ea83233dc816e1fe76ca026"
+      url "https://github.com/BasaltDBHq/BasaltDB/releases/download/v0.0.1-alpha.2/basaltdb_0.0.1-alpha.2_linux_amd64.tar.gz"
+      sha256 "5fb2a5ebc5731ac75fd4eaf61b128c1859a03a3cdc7f86b4d00c1b2cb5cc2f15"
       define_method(:install) do
         bin.install "basalt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/BasaltDBHq/BasaltDB/releases/download/v0.0.1-alpha.1/basaltdb_0.0.1-alpha.1_linux_arm64.tar.gz"
-      sha256 "65fe7350fd3113682fc67849f3daae4fdb53029746f3810470ae1e9b638cf502"
+      url "https://github.com/BasaltDBHq/BasaltDB/releases/download/v0.0.1-alpha.2/basaltdb_0.0.1-alpha.2_linux_arm64.tar.gz"
+      sha256 "252e75612f50dbe7a562bf6b820f5aa7fc907698f8bb5ae4d84eda0e39a05551"
       define_method(:install) do
         bin.install "basalt"
       end
